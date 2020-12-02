@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Empresas;
+
 use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
 class EmpresasSeeder extends Seeder
 {
     /**
@@ -14,6 +16,7 @@ class EmpresasSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Empresas::truncate();
         $faker = Faker::create();
         
@@ -28,5 +31,6 @@ class EmpresasSeeder extends Seeder
             "empresa_estado"=>1
             ]);        
         }
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

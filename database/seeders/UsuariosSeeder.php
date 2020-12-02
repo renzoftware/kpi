@@ -3,9 +3,13 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+
 use App\Models\Usuarios;
 use App\Models\Roles;
+
 use Faker\Factory as Faker;
+
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 class UsuariosSeeder extends Seeder
 {
@@ -16,7 +20,7 @@ class UsuariosSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Usuarios::truncate();
         $faker = Faker::create();
         $roles = Roles::all()->pluck('rol_id')->toArray();
@@ -43,8 +47,8 @@ class UsuariosSeeder extends Seeder
             "rol_id"=>$rol_id
             ]);        
         }
-
-
+        
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
 
     }
 }
