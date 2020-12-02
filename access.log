@@ -4,3 +4,5 @@
 ::1 - - [01/Dec/2020:18:31:54 -0500] "GET /favicon.ico HTTP/1.1" 200 295 "http://kpi.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0"
 ::1 - - [01/Dec/2020:18:32:06 -0500] "GET / HTTP/1.1" 200 6286 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0"
 ::1 - - [01/Dec/2020:18:32:08 -0500] "GET / HTTP/1.1" 200 6285 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0"
+::1 - - [01/Dec/2020:23:29:58 -0500] "GET / HTTP/1.1" 200 6286 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0"
+::1 - - [01/Dec/2020:23:30:02 -0500] "GET /favicon.ico HTTP/1.1" 200 296 "http://kpi.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0"
