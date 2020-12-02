@@ -15,7 +15,8 @@ class CrearTablaEmpresas extends Migration
     {
         //
         Schema::create('empresas', function (Blueprint $table) {
-            $table->increments('empresa_id')->unsigned();
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('empresa_id')->unsigned();
             $table->string('empresa_nombre', 100);
             $table->boolean('empresa_estado');
 

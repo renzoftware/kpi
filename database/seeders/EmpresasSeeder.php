@@ -16,7 +16,7 @@ class EmpresasSeeder extends Seeder
     {
         Empresas::truncate();
         $faker = Faker::create();
-
+        
         Empresas::create([
             "empresa_nombre"=>"Hardtech",
             "empresa_estado"=>1

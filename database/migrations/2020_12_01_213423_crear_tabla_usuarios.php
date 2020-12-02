@@ -14,12 +14,16 @@ class CrearTablaUsuarios extends Migration
     public function up()
     {
         Schema::create('usuarios', function (Blueprint $table) {
-            $table->increments('usuario_id')->unsigned();
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('usuario_id')->unsigned();
             $table->string("usuario_username", 150);
             $table->string("usuario_nombre", 150);
             $table->string("usuario_email", 100);
             $table->string("usuario_clave", 64);
             $table->boolean("usuario_estado");
+            
+            $table->bigInteger("rol_id")->unsigned();
+            $table->foreign('rol_id')->references('rol_id')->on('roles')->onDelete('cascade');
                         
             $table->timestamps();
         });
@@ -34,6 +38,6 @@ class CrearTablaUsuarios extends Migration
     {
         Schema::dropIfExists('usuarios');
         
-        //
+        //$table->dropForeign('usuarios_rol_id_foreign');
     }
 }

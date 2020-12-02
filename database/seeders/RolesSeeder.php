@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Roles;
 use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
 class RolesSeeder extends Seeder
 {
     /**
@@ -13,7 +14,8 @@ class RolesSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {          
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Roles::truncate();
         $faker = Faker::create();
 
@@ -26,5 +28,6 @@ class RolesSeeder extends Seeder
             "rol_estado"=>1
             ]);        
         }
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }
