@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
         $this->call(UsuariosSeeder::class);
         $this->call(EmpresasSeeder::class);
+        $this->call(RolesSeeder::class);
 
     }
 }
